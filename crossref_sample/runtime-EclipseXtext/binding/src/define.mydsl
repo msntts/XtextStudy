@@ -1,0 +1,16 @@
+table User {
+	int32 no
+	string name
+	string describe
+}
+
+table Division {
+	int32 id
+	string name
+}
+
+viewModel UserViewModel {
+	field DivisionId binds Division.id
+	field No binds User.describe
+	field Name binds User.name
+}

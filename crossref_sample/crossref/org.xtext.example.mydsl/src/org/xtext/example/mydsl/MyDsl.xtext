@@ -1,0 +1,36 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:
+	tables+=Table*
+	viewModels+=ViewModel*
+;
+
+ViewModel:
+	'viewModel' name=ID '{'
+		fields+=BindingField+
+	'}'
+;
+
+Table:
+	'table' name=ID '{'
+		items+=AbstructItem*	
+	'}'
+;
+
+AbstructItem:
+	Int32Item | StringItem
+;
+
+Int32Item:
+	'int32' name=ID 
+;
+
+StringItem:
+	'string' name=ID	
+;
+
+BindingField:
+	'field' name=ID 'binds' table=[Table]"."item=[AbstructItem]
+;
