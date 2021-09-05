@@ -58,3 +58,24 @@ local.properties
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
 #.project
+
+.DS_Store
+*.class
+bin/
+*~
+logs.zip
+*.orig
+*.java._trace
+*.smap
+*.log
+
+# generated sources
+src-gen/
+xtext-gen/
+
+# excluded in projects when needed
+xtend-gen/
+
+# for Gradle builds
+build
+.gradle
