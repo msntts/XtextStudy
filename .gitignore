@@ -76,6 +76,9 @@ xtext-gen/
 # excluded in projects when needed
 xtend-gen/
 
+# for Maven builds
+target
+
 # for Gradle builds
 build
 .gradle
